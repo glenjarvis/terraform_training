@@ -3,7 +3,7 @@
 ###########
 
 resource "aws_iam_policy" "s3_multimedia" {
-  name        = "NewS3Multimedia"
+  name        = "NewS3Multimedia_${terraform.workspace}"
   description = "Allow writing to Multimedia bucket"
 
   policy = <<EOF
@@ -65,7 +65,7 @@ EOF
 }
 
 resource "aws_iam_policy" "demopolicy" {
-  name        = "DemoPolicy"
+  name        = "DemoPolicy_${terraform.workspace}"
   description = ""
 
   policy = <<EOF
